@@ -8,24 +8,18 @@ import React, { useState, useEffect } from 'react';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
 
-      // Show navbar when scrolling up or at top, hide when scrolling down
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-
-      // Add background when scrolled
-      setScrolled(currentScrollPos > 50);
+      // Add background when scrolled past hero
+      setScrolled(currentScrollPos > 100);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+  }, []);
 
   const navItems = [
     {
@@ -80,35 +74,37 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-[90%] lg:w-4/5
-                  transition-all duration-300 z-50 ${
-        visible ? 'translate-y-0' : '-translate-y-32'
-      }`}
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 md:w-[90%] lg:w-4/5
+                 transition-all duration-300 z-50"
       aria-label="Main navigation"
     >
-      <div
-        className={`bg-white/90 backdrop-blur-md shadow-lg rounded-2xl px-6 py-4
-                    transition-all duration-200 ${
-          scrolled ? 'shadow-xl' : 'shadow-lg'
-        }`}
-      >
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <a
-              href="/"
-              className="focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg"
-            >
-              <img
-                src="/assets/images/school_logo.png"
-                alt="P.S. 155 William Paca School"
-                className="h-12 w-auto object-contain"
-              />
-            </a>
-          </div>
+      <div className="relative flex items-center">
+        {/* Logo - larger and vertically centered */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+          <a
+            href="/"
+            className="block focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-full"
+          >
+            <img
+              src="/assets/images/school_logo.png"
+              alt="P.S. 155 William Paca School"
+              className="h-28 w-28 object-contain drop-shadow-lg"
+            />
+          </a>
+        </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-2">
+        {/* Navbar background - starts from middle of logo */}
+        <div
+          className={`rounded-2xl px-6 py-4 pl-20 ml-14 flex-1 transition-all duration-300 ${
+            scrolled
+              ? 'bg-white/95 backdrop-blur-md shadow-lg'
+              : 'bg-transparent'
+          }`}
+        >
+          <div className="flex items-center justify-between">
+
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center space-x-2 flex-1 justify-center">
             {navItems.map((item, index) => (
               <div
                 key={index}
@@ -119,9 +115,13 @@ const Navbar = () => {
                 {item.items ? (
                   // Dropdown trigger
                   <button
-                    className="flex items-center gap-1 px-4 py-2 text-neutral-700 hover:text-blue-900
-                             font-medium text-sm transition-colors duration-150 rounded-lg
-                             hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className={`flex items-center gap-1 px-4 py-2 font-medium text-sm
+                             transition-colors duration-150 rounded-lg focus:outline-none
+                             focus:ring-2 focus:ring-amber-500 ${
+                      scrolled
+                        ? 'text-neutral-700 hover:text-blue-900 hover:bg-blue-50'
+                        : 'text-white hover:text-amber-400 hover:bg-white/10'
+                    }`}
                     aria-expanded={openDropdown === index}
                     aria-haspopup="true"
                   >
@@ -142,9 +142,13 @@ const Navbar = () => {
                   // Single link
                   <a
                     href={item.href}
-                    className="flex items-center gap-1 px-4 py-2 text-neutral-700 hover:text-blue-900
-                             font-medium text-sm transition-colors duration-150 rounded-lg
-                             hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className={`flex items-center gap-1 px-4 py-2 font-medium text-sm
+                             transition-colors duration-150 rounded-lg focus:outline-none
+                             focus:ring-2 focus:ring-amber-500 ${
+                      scrolled
+                        ? 'text-neutral-700 hover:text-blue-900 hover:bg-blue-50'
+                        : 'text-white hover:text-amber-400 hover:bg-white/10'
+                    }`}
                   >
                     {item.label}
                   </a>
@@ -192,8 +196,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
+          {/* CTA Button - Right aligned */}
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <a
               href="/contact"
               className="px-5 py-2.5 bg-amber-500 text-white rounded-lg font-medium text-sm
@@ -206,8 +210,12 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-neutral-700 p-2 rounded-lg hover:bg-blue-50
-                     focus:outline-none focus:ring-2 focus:ring-amber-500"
+            className={`lg:hidden p-2 rounded-lg focus:outline-none focus:ring-2
+                     focus:ring-amber-500 transition-colors duration-150 ${
+              scrolled
+                ? 'text-neutral-700 hover:bg-blue-50'
+                : 'text-white hover:bg-white/10'
+            }`}
             aria-label="Toggle menu"
             aria-expanded="false"
           >
@@ -223,6 +231,7 @@ const Navbar = () => {
               <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
+          </div>
         </div>
       </div>
 
