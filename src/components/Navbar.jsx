@@ -23,11 +23,11 @@ const Navbar = () => {
       label: 'Our School',
       items: [
         { label: 'About Us', href: '/about' },
-        { label: 'Welcome Video', href: '#welcome-video' },
-        { label: 'Registration Process', href: '#registration' },
-        { label: 'School/Parent Compact', href: '#compact' },
-        { label: 'Parent and Family Engagement', href: '#family-engagement' },
-        { label: 'Our CEP', href: '#cep' },
+        { label: 'Welcome Video', href: 'https://www.youtube.com/watch?v=S7FOgoxQNns', external: true },
+        { label: 'Registration Process', href: 'https://4.files.edl.io/8c08/03/24/22/160810-f31853e1-ea81-43da-8314-e49205ddd7da.pdf', external: true },
+        { label: 'School/Parent Compact', href: 'https://4.files.edl.io/7e41/12/16/24/001233-ad0f0c46-05ae-4911-a992-750152c46010.pdf', external: true },
+        { label: 'Parent and Family Engagement', href: 'https://4.files.edl.io/c81f/12/16/24/001250-89fa3dbd-3356-4df2-8cad-3a098593bdb3.pdf', external: true },
+        { label: 'Our CEP', href: 'https://4.files.edl.io/9ed7/03/06/25/120031-df350740-6374-4f75-be0d-93cb1669272f.pdf', external: true },
       ]
     },
     {
@@ -41,10 +41,10 @@ const Navbar = () => {
     {
       label: 'Student Resources',
       items: [
-        { label: 'Google Classroom', href: 'https://classroom.google.com', external: true },
-        { label: 'I-Ready', href: 'https://login.i-ready.com', external: true },
-        { label: 'MyOn', href: 'https://www.myon.com', external: true },
-        { label: 'Epic! Books', href: 'https://www.getepic.com', external: true },
+        { label: 'Google Classroom', href: 'https://edu.google.com/intl/ALL_us/workspace-for-education/products/classroom/', external: true },
+        { label: 'I-Ready', href: 'https://login.i-ready.com/', external: true },
+        { label: 'MyOn', href: 'https://www.myon.com/login/', external: true },
+        { label: 'Epic! Books', href: 'https://www.getepic.com/sign-in', external: true },
       ]
     },
     {
@@ -56,7 +56,7 @@ const Navbar = () => {
       items: [
         { label: 'Contact Information', href: '/contact' },
         { label: 'Parent Concern Form', href: '#concern-form' },
-        { label: 'School Tour/Question Request', href: '#tour-request' },
+        { label: 'School Tour/Question Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSfp4BnP4q0LJqZn8GXSyaXGuIYRycPAlzQGDfrrseeUQgzFcw/viewform', external: true },
       ]
     },
   ];
