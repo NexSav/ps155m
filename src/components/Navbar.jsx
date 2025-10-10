@@ -85,12 +85,15 @@ const Navbar = () => {
             <div className="flex items-center space-x-3">
               <div className="flex-shrink-0">
                 <a
-                  href="#home"
-                  className="text-white font-semibold text-lg sm:text-xl focus:outline-none
-                           focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-blue-900
-                           rounded px-2 py-1"
+                  href="/"
+                  className="focus:outline-none focus:ring-2 focus:ring-amber-500
+                           focus:ring-offset-2 focus:ring-offset-blue-900 rounded"
                 >
-                  P.S. 155
+                  <img
+                    src="/assets/images/school_logo.png"
+                    alt="P.S. 155 William Paca School"
+                    className="h-12 w-auto"
+                  />
                 </a>
               </div>
             </div>
@@ -141,38 +144,40 @@ const Navbar = () => {
 
                   {/* Dropdown Menu */}
                   {item.items && openDropdown === index && (
-                    <div
-                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg
-                               py-2 border border-neutral-200 animate-fadeIn"
-                    >
-                      {item.items.map((subItem, subIndex) => (
-                        <a
-                          key={subIndex}
-                          href={subItem.href}
-                          target={subItem.external ? '_blank' : undefined}
-                          rel={subItem.external ? 'noopener noreferrer' : undefined}
-                          className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-blue-50
-                                   hover:text-blue-900 transition-colors duration-150
-                                   focus:outline-none focus:bg-blue-50 focus:text-blue-900"
-                        >
-                          {subItem.label}
-                          {subItem.external && (
-                            <svg
-                              className="w-3 h-3 inline-block ml-1 opacity-60"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                              />
-                            </svg>
-                          )}
-                        </a>
-                      ))}
+                    <div className="absolute top-full left-0 pt-2">
+                      <div
+                        className="w-64 bg-white rounded-lg shadow-lg py-2 border border-neutral-200
+                                 animate-fadeIn"
+                      >
+                        {item.items.map((subItem, subIndex) => (
+                          <a
+                            key={subIndex}
+                            href={subItem.href}
+                            target={subItem.external ? '_blank' : undefined}
+                            rel={subItem.external ? 'noopener noreferrer' : undefined}
+                            className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-blue-50
+                                     hover:text-blue-900 transition-colors duration-150
+                                     focus:outline-none focus:bg-blue-50 focus:text-blue-900"
+                          >
+                            {subItem.label}
+                            {subItem.external && (
+                              <svg
+                                className="w-3 h-3 inline-block ml-1 opacity-60"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                />
+                              </svg>
+                            )}
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
