@@ -97,7 +97,7 @@ const Navbar = () => {
         <div
           className={`rounded-2xl px-6 py-4 pl-20 ml-14 flex-1 transition-all duration-300 ${
             scrolled
-              ? 'bg-white/95 backdrop-blur-md shadow-lg'
+              ? 'bg-white/95 backdrop-blur-md shadow-md border border-neutral-200'
               : 'bg-transparent'
           }`}
         >

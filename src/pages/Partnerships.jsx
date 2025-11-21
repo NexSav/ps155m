@@ -50,10 +50,10 @@ const Partnerships = () => {
     <div className="min-h-screen bg-neutral-50">
       <Navbar />
 
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section
-          className="relative bg-cover bg-center py-32"
+          className="relative bg-cover bg-center pt-48 pb-32"
           style={{
             backgroundImage: 'url(https://3.files.edl.io/28a6/25/03/11/163255-c79cfae3-7a81-43eb-b5fd-79656ff0c9aa.jpg)'
           }}

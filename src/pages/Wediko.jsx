@@ -49,10 +49,10 @@ const Wediko = () => {
     <div className="min-h-screen bg-neutral-50">
       <Navbar />
 
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
         <section
-          className="relative bg-cover bg-center py-32"
+          className="relative bg-cover bg-center pt-48 pb-32"
           style={{
             backgroundImage: 'url(https://3.files.edl.io/5103/25/03/11/202556-39ae46c0-fe32-4d9b-b5f7-57e3da3bc73f.jpg)'
           }}

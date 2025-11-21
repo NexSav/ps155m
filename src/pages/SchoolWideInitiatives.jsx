@@ -67,9 +67,9 @@ const SchoolWideInitiatives = () => {
     <div className="min-h-screen bg-neutral-50">
       <Navbar />
 
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 py-16">
+        <section className="bg-gradient-to-r from-blue-900 to-blue-700 pt-48 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
               School-Wide Initiatives
