@@ -8,9 +8,13 @@ import Navbar from '../components/Navbar';
 const SchoolWideInitiatives = () => {
   const initiatives = [
     {
+      title: 'Culturally Responsive & Sustaining Education (CRSE)',
+      description: 'At P.S. 155 we embed culturally responsive teaching, honor students\' home languages and experiences, and build equity-focused leadership and instruction.',
+    },
+    {
       title: 'Dual Language Program',
       image: 'https://3.files.edl.io/362b/25/03/11/142447-a574cd72-49ea-4e25-8584-3add3bec6462.jpg',
-      description: "We're proud to offer a comprehensive Dual Language program for students from 3K through 5th grade, ensuring a consistent and enriching experience at every level.",
+      description: "We offer a bilingual learning environment (Spanish/English) for students to become biliterate and cross-culturally competent. Our comprehensive program runs from 3K through 5th grade, ensuring a consistent and enriching experience at every level.",
       models: [
         {
           grade: 'Kindergarten to 2nd Grade',
@@ -25,11 +29,18 @@ const SchoolWideInitiatives = () => {
       ]
     },
     {
-      title: 'Rise and Connect',
+      title: 'Creativity Initiative ("Choose Creativity")',
       image: 'https://3.files.edl.io/1894/25/03/11/152659-c1caab04-25af-4bc9-af89-056dad8cc4c6.png',
-      description: 'A monthly event dedicated to fostering strong connections between our school and families! We celebrate outstanding attendance and explore our guiding principles.',
-      schedule: 'Grades K-2: First Monday of every month | Grades 3-5: First Tuesday of every month',
+      description: 'Our school promotes student-centered inquiry, project-based learning, design thinking, and creative expression in all content areas.',
       principles: ['Expressive', 'Patient', 'Present', 'Resourceful', 'Unconventional', 'Curious', 'Inventive', 'Intuitive']
+    },
+    {
+      title: 'Chess Program',
+      description: 'On Fridays during the spring semester, K-2 scholars engage in structured chess sessions for 16 weeks—fostering critical thinking, problem-solving, perseverance, and strategy.',
+    },
+    {
+      title: 'Soccer Partnership',
+      description: 'P.S. 155 has partnered with the New York City FC soccer league to provide free training to students, promoting physical fitness, teamwork, and sportsmanship.',
     },
     {
       title: 'ClassDojo',

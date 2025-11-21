@@ -7,211 +7,183 @@ import Navbar from '../components/Navbar';
  */
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-neutral-50 font-sans text-neutral-800 selection:bg-school-gold selection:text-white">
       <Navbar />
 
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 pt-48 pb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
-              Contact Information
+        <section className="relative pt-48 pb-32 overflow-hidden bg-school-blue">
+           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+           <div className="absolute inset-0 bg-gradient-to-b from-school-blue to-[#1a4c66]"></div>
+           
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-school-gold text-sm font-bold uppercase tracking-wider mb-4 backdrop-blur-sm border border-white/10">Get in Touch</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+              Contact Us
             </h1>
-            <p className="text-xl text-white max-w-3xl">
-              Get in touch with P.S. 155 - We're here to help
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
+              We're here to help! Reach out with any questions or to schedule a visit.
             </p>
           </div>
         </section>
 
         {/* Main Content */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Details */}
+            <div className="grid lg:grid-cols-2 gap-16">
+              
+              {/* Left Column: Contact Details */}
               <div>
-                <h2 className="text-3xl font-semibold text-neutral-900 mb-8">
+                <h2 className="text-3xl font-bold text-school-blue mb-8 border-l-4 border-school-gold pl-4">
                   Visit Us
                 </h2>
 
                 {/* School Image */}
-                <div className="mb-8">
+                <div className="mb-10 relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-school-gold to-school-blue rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                   <img
                     src="https://3.files.edl.io/df94/22/02/14/161743-4366e146-c2a3-4d5e-bf3c-bd76c7d8f213.jpg"
                     alt="P.S. 155 School Building"
-                    className="w-full h-64 object-cover rounded-xl shadow-md"
+                    className="relative w-full h-72 object-cover rounded-xl shadow-xl"
                   />
                 </div>
 
-                {/* Office Hours */}
-                <div className="bg-blue-50 rounded-lg p-6 mb-6 border border-blue-200">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 text-blue-900">
-                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                <div className="space-y-6">
+                    {/* Office Hours */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 flex gap-5 items-start">
+                        <div className="flex-shrink-0 w-12 h-12 bg-blue-50 text-school-blue rounded-full flex items-center justify-center">
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-school-blue mb-1">Main Office Hours</h3>
+                            <p className="text-neutral-600">Monday - Friday<br />8:00 AM - 3:30 PM</p>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                        Main Office Hours
-                      </h3>
-                      <p className="text-neutral-700">
-                        Monday - Friday<br />
-                        8:00 AM - 3:30 PM
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Address */}
-                <div className="bg-white rounded-lg p-6 mb-6 shadow-sm border border-neutral-200">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 text-blue-900">
-                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                      </svg>
+                    {/* Address */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 flex gap-5 items-start">
+                        <div className="flex-shrink-0 w-12 h-12 bg-blue-50 text-school-blue rounded-full flex items-center justify-center">
+                            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-school-blue mb-1">Address</h3>
+                            <p className="text-neutral-600 mb-3">319 East 117th Street<br />New York, NY 10035</p>
+                            <a href="https://maps.google.com/?q=319+East+117th+Street+New+York+NY+10035" target="_blank" rel="noreferrer" className="text-school-gold font-semibold hover:text-school-blue text-sm flex items-center gap-1">
+                                Open in Maps <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                        Address
-                      </h3>
-                      <p className="text-neutral-700">
-                        319 East 117th Street<br />
-                        New York, NY 10035
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Phone */}
-                <div className="bg-white rounded-lg p-6 shadow-sm border border-neutral-200">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 text-blue-900">
-                      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                      </svg>
+                    {/* Phone */}
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 flex gap-5 items-start">
+                        <div className="flex-shrink-0 w-12 h-12 bg-blue-50 text-school-blue rounded-full flex items-center justify-center">
+                             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-bold text-school-blue mb-1">Phone</h3>
+                             <a href="tel:212-860-5885" className="text-xl font-bold text-neutral-800 hover:text-school-gold transition-colors">
+                                (212) 860-5885
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                        Telephone
-                      </h3>
-                      <a
-                        href="tel:212-860-5885"
-                        className="text-blue-900 hover:text-blue-700 font-medium text-lg"
-                      >
-                        212-860-5885
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
 
-              {/* Contact People */}
+              {/* Right Column: Key Contacts */}
               <div>
-                <h2 className="text-3xl font-semibold text-neutral-900 mb-8">
+                <h2 className="text-3xl font-bold text-school-blue mb-8 border-l-4 border-school-gold pl-4">
                   Key Contacts
                 </h2>
 
-                {/* Principal */}
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 mb-6
-                             border border-blue-200">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 text-blue-900">
-                      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                      </svg>
+                <div className="space-y-6">
+                    {/* Principal */}
+                    <div className="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-school-blue hover:shadow-xl transition-all">
+                        <div className="flex items-start gap-5 mb-4">
+                            <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-school-blue font-bold text-2xl">
+                                DS
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-school-blue">Ms. Sanabria</h3>
+                                <p className="text-school-gold font-medium uppercase tracking-wide text-sm">School Principal</p>
+                            </div>
+                        </div>
+                        <a href="mailto:dsanabria@ps155.org" className="flex items-center gap-3 p-4 bg-neutral-50 rounded-xl hover:bg-school-blue hover:text-white transition-all group">
+                             <svg className="w-5 h-5 text-school-blue group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span className="font-medium">dsanabria@ps155.org</span>
+                        </a>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-neutral-900 mb-2">
-                        Ms. Sanabria
-                      </h3>
-                      <p className="text-neutral-700 mb-3">School Principal</p>
-                      <a
-                        href="mailto:dsanabria@ps155.org"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-blue-900 text-white
-                                 rounded-lg hover:bg-blue-800 transition-colors duration-150
-                                 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                        </svg>
-                        dsanabria@ps155.org
-                      </a>
+
+                    {/* Parent Coordinator */}
+                    <div className="bg-white rounded-2xl p-8 shadow-lg border-t-4 border-school-gold hover:shadow-xl transition-all">
+                        <div className="flex items-start gap-5 mb-4">
+                             <div className="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center text-school-gold font-bold text-2xl">
+                                MS
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-school-blue">Ms. Stevenson</h3>
+                                <p className="text-school-gold font-medium uppercase tracking-wide text-sm">Parent Coordinator</p>
+                            </div>
+                        </div>
+                         <a href="mailto:mstevenson@ps155.org" className="flex items-center gap-3 p-4 bg-neutral-50 rounded-xl hover:bg-school-gold hover:text-white transition-all group">
+                             <svg className="w-5 h-5 text-school-gold group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span className="font-medium">mstevenson@ps155.org</span>
+                        </a>
                     </div>
-                  </div>
                 </div>
 
-                {/* Parent Coordinator */}
-                <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-8
-                             border border-amber-200">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 text-amber-600">
-                      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                      </svg>
+                {/* Map Embed */}
+                <div className="mt-10 bg-neutral-100 rounded-2xl overflow-hidden h-64 shadow-inner border border-neutral-200 relative group">
+                     <div className="absolute inset-0 flex items-center justify-center bg-black/5 z-10 pointer-events-none">
+                        <span className="bg-white/90 backdrop-blur px-4 py-2 rounded-lg shadow text-sm font-bold text-neutral-600">Map View</span>
+                     </div>
+                     {/* Placeholder for actual map - keeping static image or color for now */}
+                    <div className="w-full h-full bg-blue-100 flex items-center justify-center text-blue-300">
+                        <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-neutral-900 mb-2">
-                        Ms. Stevenson
-                      </h3>
-                      <p className="text-neutral-700 mb-3">Parent Coordinator</p>
-                      <a
-                        href="mailto:mstevenson@ps155.org"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 text-white
-                                 rounded-lg hover:bg-amber-600 transition-colors duration-150
-                                 focus:outline-none focus:ring-2 focus:ring-amber-500"
-                      >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                        </svg>
-                        mstevenson@ps155.org
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
 
-        {/* Map Section (Placeholder) */}
-        <section className="py-16 bg-neutral-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-semibold text-neutral-900 mb-8 text-center">
-              Find Us
-            </h2>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-neutral-200">
-              <div className="aspect-video bg-neutral-100 rounded-lg flex items-center justify-center">
-                <div className="text-center">
-                  <svg className="w-16 h-16 text-neutral-400 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                  </svg>
-                  <p className="text-neutral-600 mb-4">Map Integration</p>
-                  <a
+        {/* Map Link Section */}
+        <section className="py-20 bg-school-blue relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div className="relative max-w-5xl mx-auto px-4 text-center">
+                <h2 className="text-3xl font-bold text-white mb-8">Find Your Way to P.S. 155</h2>
+                <a
                     href="https://www.google.com/maps/search/?api=1&query=319+East+117th+Street+New+York+NY+10035"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-blue-900 text-white
-                             rounded-lg hover:bg-blue-800 transition-colors duration-150
-                             focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white text-school-blue rounded-full font-bold text-lg hover:bg-school-gold hover:text-white transition-all duration-300 shadow-lg"
                   >
-                    Open in Google Maps
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    Get Directions
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </a>
-                </div>
-              </div>
             </div>
-          </div>
         </section>
+
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-neutral-100">
+      <footer className="bg-school-blue text-white py-12 border-t border-blue-800">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <p className="text-sm text-blue-200">
             &copy; {new Date().getFullYear()} P.S. 155 M The William Paca School. All rights reserved.
           </p>
         </div>

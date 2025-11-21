@@ -26,6 +26,7 @@ const Navbar = () => {
       label: 'Our School',
       items: [
         { label: 'About Us', href: '/about' },
+        { label: 'Principal Message', href: '/principal-message' },
         { label: 'Welcome Video', href: 'https://www.youtube.com/watch?v=S7FOgoxQNns', external: true },
         { label: 'Registration Process', href: 'https://4.files.edl.io/8c08/03/24/22/160810-f31853e1-ea81-43da-8314-e49205ddd7da.pdf', external: true },
         { label: 'School/Parent Compact', href: 'https://4.files.edl.io/7e41/12/16/24/001233-ad0f0c46-05ae-4911-a992-750152c46010.pdf', external: true },
@@ -37,6 +38,7 @@ const Navbar = () => {
       label: 'Offered Programs',
       items: [
         { label: 'School-Wide Initiatives', href: '/initiatives' },
+        { label: 'After-School & Enrichment', href: '/after-school' },
         { label: 'Our Partnerships', href: '/partnerships' },
         { label: 'Our CBO: Wediko', href: '/wediko' },
       ]
@@ -83,7 +85,7 @@ const Navbar = () => {
         <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
           <a
             href="/"
-            className="block focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-full"
+            className="block focus:outline-none focus:ring-2 focus:ring-school-gold rounded-full"
           >
             <img
               src="/assets/images/school_logo.png"
@@ -117,10 +119,10 @@ const Navbar = () => {
                   <button
                     className={`flex items-center gap-1 px-4 py-2 font-medium text-sm
                              transition-colors duration-150 rounded-lg focus:outline-none
-                             focus:ring-2 focus:ring-amber-500 ${
+                             focus:ring-2 focus:ring-school-gold ${
                       scrolled
-                        ? 'text-neutral-700 hover:text-blue-900 hover:bg-blue-50'
-                        : 'text-white hover:text-amber-400 hover:bg-white/10'
+                        ? 'text-neutral-700 hover:text-school-blue hover:bg-blue-50'
+                        : 'text-white hover:text-school-gold hover:bg-white/10'
                     }`}
                     aria-expanded={openDropdown === index}
                     aria-haspopup="true"
@@ -144,10 +146,10 @@ const Navbar = () => {
                     href={item.href}
                     className={`flex items-center gap-1 px-4 py-2 font-medium text-sm
                              transition-colors duration-150 rounded-lg focus:outline-none
-                             focus:ring-2 focus:ring-amber-500 ${
+                             focus:ring-2 focus:ring-school-gold ${
                       scrolled
-                        ? 'text-neutral-700 hover:text-blue-900 hover:bg-blue-50'
-                        : 'text-white hover:text-amber-400 hover:bg-white/10'
+                        ? 'text-neutral-700 hover:text-school-blue hover:bg-blue-50'
+                        : 'text-white hover:text-school-gold hover:bg-white/10'
                     }`}
                   >
                     {item.label}
@@ -168,8 +170,8 @@ const Navbar = () => {
                           target={subItem.external ? '_blank' : undefined}
                           rel={subItem.external ? 'noopener noreferrer' : undefined}
                           className="block px-4 py-2.5 text-sm text-neutral-700 hover:bg-blue-50
-                                   hover:text-blue-900 transition-colors duration-150
-                                   focus:outline-none focus:bg-blue-50 focus:text-blue-900"
+                                   hover:text-school-blue transition-colors duration-150
+                                   focus:outline-none focus:bg-blue-50 focus:text-school-blue"
                         >
                           {subItem.label}
                           {subItem.external && (
@@ -200,9 +202,9 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center flex-shrink-0">
             <a
               href="/contact"
-              className="px-5 py-2.5 bg-amber-500 text-white rounded-lg font-medium text-sm
-                       hover:bg-amber-600 transition-all duration-150 hover:scale-105
-                       focus:outline-none focus:ring-2 focus:ring-amber-500 shadow-sm"
+              className="px-5 py-2.5 bg-school-gold text-white rounded-lg font-medium text-sm
+                       hover:bg-yellow-500 transition-all duration-150 hover:scale-105
+                       focus:outline-none focus:ring-2 focus:ring-school-gold shadow-sm"
             >
               Get in Touch
             </a>
@@ -211,7 +213,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             className={`lg:hidden p-2 rounded-lg focus:outline-none focus:ring-2
-                     focus:ring-amber-500 transition-colors duration-150 ${
+                     focus:ring-school-gold transition-colors duration-150 ${
               scrolled
                 ? 'text-neutral-700 hover:bg-blue-50'
                 : 'text-white hover:bg-white/10'

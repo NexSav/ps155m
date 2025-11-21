@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
+import PrincipalMessage from './pages/PrincipalMessage';
 import SchoolWideInitiatives from './pages/SchoolWideInitiatives';
+import AfterSchoolEnrichment from './pages/AfterSchoolEnrichment';
 import Partnerships from './pages/Partnerships';
 import Wediko from './pages/Wediko';
 import Contact from './pages/Contact';
@@ -21,7 +23,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage scrapedData={scrapedData} />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/principal-message" element={<PrincipalMessage />} />
         <Route path="/initiatives" element={<SchoolWideInitiatives />} />
+        <Route path="/after-school" element={<AfterSchoolEnrichment />} />
         <Route path="/partnerships" element={<Partnerships />} />
         <Route path="/wediko" element={<Wediko />} />
         <Route path="/contact" element={<Contact />} />

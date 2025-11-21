@@ -6,6 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        school: {
+          gold: '#fcbe37',
+          blue: '#296481',
+        },
         blue: {
           900: '#1E3A8A',
           800: '#1E40AF',
