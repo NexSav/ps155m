@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 /**
  * AboutUs Page
@@ -147,29 +148,9 @@ const AboutUs = () => {
       </main>
 
       {/* Footer */}
-      <FooterSection />
+      <Footer />
     </div>
   );
-};
-
-const FooterSection = () => {
-    const currentYear = new Date().getFullYear();
-    return (
-      <footer className="bg-school-blue text-white py-12 border-t border-blue-800">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="flex justify-center items-center gap-4 mb-8">
-              <img src="/assets/images/school_logo.png" alt="Logo" className="w-12 h-12 object-contain bg-white rounded-full p-1" />
-              <div className="text-left">
-                  <p className="font-bold text-lg leading-none">P.S. 155 M</p>
-                  <p className="text-blue-200 text-sm">The William Paca School</p>
-              </div>
-          </div>
-          <p className="text-sm text-blue-200">
-            &copy; {currentYear} P.S. 155 M The William Paca School. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    );
 };
 
 export default AboutUs;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 /**
  * Wediko Page
@@ -46,60 +47,59 @@ const Wediko = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-neutral-50">
+    <div className="min-h-screen bg-neutral-50 font-sans text-neutral-800 selection:bg-school-gold selection:text-white">
       <Navbar />
 
       <main>
         {/* Hero Section */}
         <section
-          className="relative bg-cover bg-center pt-48 pb-32"
+          className="relative pt-48 pb-32 overflow-hidden bg-school-blue bg-cover bg-center"
           style={{
             backgroundImage: 'url(https://3.files.edl.io/5103/25/03/11/202556-39ae46c0-fe32-4d9b-b5f7-57e3da3bc73f.jpg)'
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-700/90" />
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4">
+          <div className="absolute inset-0 bg-gradient-to-r from-school-blue/90 to-school-blue/90" />
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-school-gold text-sm font-bold uppercase tracking-wider mb-4 backdrop-blur-sm border border-white/10">Partnership</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
               Wediko Team
             </h1>
-            <p className="text-xl text-white max-w-3xl">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed">
               Partnering with The Home for Little Wanderers to provide comprehensive support for our students
             </p>
           </div>
         </section>
 
         {/* Introduction */}
-        <section className="py-16 bg-white">
+        <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-lg text-neutral-700 leading-relaxed text-center max-w-4xl mx-auto mb-12">
-              We're proud to partner with Wediko The Home for Little Wanderers to provide extra support for our students!
-            </p>
-
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-semibold text-neutral-900 mb-8">
+              <h2 className="text-3xl font-bold text-school-blue mb-6">
                 What does this mean for your child?
               </h2>
+              <p className="text-lg text-neutral-600 leading-relaxed max-w-3xl mx-auto">
+                We're proud to partner with Wediko The Home for Little Wanderers to provide extra support for our students!
+              </p>
             </div>
 
             {/* Benefits Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 gap-8">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 bg-blue-50 rounded-lg p-6 border border-blue-200
-                           hover:shadow-md transition-shadow duration-200"
+                  className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-100 hover:border-school-gold/50 transition-all hover:-translate-y-1"
                 >
-                  <div className="flex-shrink-0 text-blue-900">
+                  <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-school-blue">
                     {benefit.icon}
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-neutral-700 leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-bold text-school-blue mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-neutral-600 leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -107,29 +107,35 @@ const Wediko = () => {
         </section>
 
         {/* About The Home for Little Wanderers */}
-        <section className="py-16 bg-neutral-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-neutral-100">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="md:w-1/3">
-                  <img
-                    src="https://3.files.edl.io/2fbb/25/03/11/202728-ad175736-1212-4408-9a6c-81546dbc567e.png"
-                    alt="The Home for Little Wanderers"
-                    className="w-full rounded-lg shadow-md"
-                  />
-                </div>
-                <div className="md:w-2/3">
-                  <h2 className="text-2xl font-semibold text-neutral-900 mb-4">
-                    About The Home for Little Wanderers
-                  </h2>
-                  <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+        <section className="py-24 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <div className="absolute -top-4 -left-4 w-full h-full bg-school-gold rounded-2xl -z-10 transform -rotate-2"></div>
+                <img
+                  src="https://3.files.edl.io/2fbb/25/03/11/202728-ad175736-1212-4408-9a6c-81546dbc567e.png"
+                  alt="The Home for Little Wanderers"
+                  className="w-full rounded-2xl shadow-2xl border-4 border-white"
+                />
+              </div>
+
+              <div>
+                <h2 className="text-3xl font-bold text-school-blue mb-6 flex items-center gap-3">
+                  <span className="w-12 h-1 bg-school-gold rounded-full"></span>
+                  About The Home for Little Wanderers
+                </h2>
+                <div className="space-y-6 text-lg text-neutral-600 leading-relaxed">
+                  <p>
                     The Home for Little Wanderers is a community organization dedicated to helping
                     children and families. They provide a wide range of services to make sure every
                     child has what they need to thrive.
                   </p>
-                  <p className="text-lg text-neutral-700 leading-relaxed">
+                  <p>
                     Their team of experts works to support each child's emotional, social, and
                     educational well-being.
+                  </p>
+                  <p className="font-medium text-school-blue">
+                    They're here to help our students feel good, do well in school, and build a bright future!
                   </p>
                 </div>
               </div>
@@ -137,49 +143,65 @@ const Wediko = () => {
           </div>
         </section>
 
-        {/* Summary */}
-        <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-semibold text-white mb-4">
-              In simple terms...
-            </h2>
-            <p className="text-2xl text-white">
-              They're here to help our students feel good, do well in school, and build a bright future!
-            </p>
+        {/* After School Program */}
+        <section className="py-20 bg-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-school-blue/5 -z-10"></div>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-school-blue">After School Program</h2>
+            </div>
+
+            <div className="bg-school-blue rounded-2xl p-10 shadow-xl border-t-8 border-school-gold text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-6 opacity-10">
+                <svg className="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              </div>
+              <div className="relative z-10 text-center">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Our amazing Wediko CBO provides after school services
+                </h3>
+                <p className="text-lg text-blue-100 leading-relaxed mb-8">
+                  Comprehensive support and activities for our students.
+                </p>
+                <div className="inline-block bg-white rounded-2xl px-8 py-6 shadow-lg">
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center border-b border-neutral-200 pb-2">
+                      <span className="font-medium text-neutral-600">Days</span>
+                      <span className="font-bold text-xl text-school-blue">Monday - Friday</span>
+                    </div>
+                    <div className="flex justify-between items-center pt-2">
+                      <span className="font-medium text-neutral-600">Time</span>
+                      <span className="font-bold text-xl text-school-gold">2:20 PM - 5:30 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* After School Program */}
-        <section className="py-16 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-amber-50 rounded-xl p-8 border border-amber-200 text-center">
-              <h2 className="text-2xl font-semibold text-neutral-900 mb-4">
-                After School Program
-              </h2>
-              <p className="text-lg text-neutral-700 mb-4">
-                Our amazing Wediko CBO provides after school services
-              </p>
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-lg border border-amber-300">
-                <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-lg font-medium text-neutral-900">
-                  Monday - Friday | 2:20 PM - 5:30 PM
-                </span>
-              </div>
-            </div>
+        {/* Call to Action */}
+        <section className="py-20 bg-school-gold relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diamond-upholstery.png')] opacity-10"></div>
+          <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Interested in Our Programs?
+            </h2>
+            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+              Contact us to learn more about enrollment and how Wediko can support your child's growth.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block px-10 py-4 bg-white text-school-gold rounded-full font-bold text-lg
+                       hover:bg-neutral-100 transition-all duration-300 hover:-translate-y-1 shadow-lg"
+            >
+              Contact Us
+            </a>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm text-neutral-100">
-            &copy; {new Date().getFullYear()} P.S. 155 M The William Paca School. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

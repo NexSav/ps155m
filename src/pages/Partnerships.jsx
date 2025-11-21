@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 /**
  * Partnerships Page
@@ -293,13 +294,7 @@ const Partnerships = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-school-blue text-white py-12 border-t border-blue-800">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-sm text-blue-200">
-            &copy; {new Date().getFullYear()} P.S. 155 M The William Paca School. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
