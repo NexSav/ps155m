@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
 
 /**
@@ -6,20 +6,7 @@ import Navbar from '../components/Navbar';
  * Unique, sleek & professional design catered to a school look.
  * Colors: #fcbe37 (Gold) & #296481 (Blue)
  */
-const HomePage = ({ scrapedData }) => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    if (typeof scrapedData === 'string') {
-      try {
-        setData(JSON.parse(scrapedData));
-      } catch (e) {
-        setData({ markdown: scrapedData });
-      }
-    } else {
-      setData(scrapedData);
-    }
-  }, [scrapedData]);
+const HomePage = () => {
 
   const handleSkipToContent = (e) => {
     e.preventDefault();
